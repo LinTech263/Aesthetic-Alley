@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#1A1918"/>
+  <!-- Elegant architectural arch and monogram -->
+  <path d="M156 380 V 230 C 156 160 200 110 256 110 C 312 110 356 160 356 230 V 380" fill="none" stroke="#FAF8F5" stroke-width="20" stroke-linecap="round"/>
+  <path d="M190 380 V 240 C 190 190 220 150 256 150 C 292 150 322 190 322 240 V 380" fill="none" stroke="#B85D38" stroke-width="12" stroke-linecap="round"/>
+  <!-- Central crossbar and sun accent -->
+  <line x1="170" y1="290" x2="342" y2="290" stroke="#FAF8F5" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="256" cy="220" r="18" fill="#C49B45"/>
+  <circle cx="256" cy="340" r="8" fill="#FAF8F5"/>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "Aesthetic Alley",
+  "description": "Luxury Zimbabwean home decor and curated interior accessories. Bespoke furniture accents, handcrafted lighting, artisanal textiles, and quiet luxury living.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
