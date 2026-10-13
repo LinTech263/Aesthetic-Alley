@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StoreProvider, useStore } from './context/StoreContext';
 import { AnnouncementBar } from './components/layout/AnnouncementBar';
 import { Header } from './components/layout/Header';
@@ -27,6 +27,7 @@ import { GiftCardsView } from './views/GiftCardsView';
 
 const MainContent: React.FC = () => {
   const { currentView } = useStore();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Scroll to top upon view change
   useEffect(() => {
@@ -39,7 +40,7 @@ const MainContent: React.FC = () => {
       <OfflineIndicator />
       <ToastContainer />
       <AnnouncementBar />
-      <Header />
+      <Header onOpenSearch={() => setIsSearchOpen(true)} />
 
       <main className="flex-1">
         {currentView === 'home' && <HomeView />}
@@ -55,14 +56,14 @@ const MainContent: React.FC = () => {
         {currentView === 'faq' && <CustomerCareView initialSection="faq" />}
         {currentView === 'shipping' && <CustomerCareView initialSection="shipping" />}
         {currentView === 'returns' && <CustomerCareView initialSection="returns" />}
-        {currentView === 'gift-cards' && <GiftCardsView />}
+        {(currentView === 'gift-cards' || currentView === 'giftcards') && <GiftCardsView />}
       </main>
 
       <Footer />
 
       {/* Global Slide-overs and Interactive Modals */}
       <CartDrawer />
-      <SearchModal />
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <LiveChatDrawer />
       <ExitIntentModal />
     </div>

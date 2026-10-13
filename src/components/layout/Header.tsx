@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { PWAInstallButton } from '../common/PWAInstallButton';
 
-export const Header: React.FC<{ onOpenSearch: () => void }> = ({ onOpenSearch }) => {
+export const Header: React.FC<{ onOpenSearch?: () => void }> = ({ onOpenSearch = () => {} }) => {
   const {
     currentView,
     navigateTo,
